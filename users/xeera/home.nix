@@ -29,10 +29,14 @@
   };
   home.packages = with pkgs; [
     kitty
+    redshift
+    dust
     fish
     fzf
     pinentry_qt
     bpytop
+    ripgrep
+    fd
     neofetch
     lsd
     gcc
@@ -54,5 +58,6 @@
  programs.neovim = {
   enable = true;
   package = pkgs.neovim-nightly;
- }; 
+ };
+
 }
