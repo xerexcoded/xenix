@@ -17,6 +17,8 @@
   networking.hostName = "xenix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true ;
+  # for auto login
+  security.pam.services.sddm.enableKwallet = true;
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 

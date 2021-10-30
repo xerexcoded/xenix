@@ -38,6 +38,7 @@
     ripgrep
     fd
     neofetch
+    transmission-gtk
     lsd
     gcc
     pcmanfm
@@ -59,5 +60,5 @@
   enable = true;
   package = pkgs.neovim-nightly;
  };
-
 }
+
