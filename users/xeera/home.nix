@@ -17,9 +17,13 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "21.05";
-
-
+  home.stateVersion = "22.05";
+nixpkgs.config.allowUnfree = true;
+ programs.git = {
+    enable = true;
+    userName  = "xerexcoded";
+    userEmail = "arnavbanerjee61@gmail.com";
+  };
   programs.gpg = {
     enable = true;
   };
@@ -27,25 +31,27 @@
     enable = true;
     pinentryFlavor = "qt";
   };
+   programs.vscode.enable = true;
+  programs.vscode.package = pkgs.vscode-fhs;
   home.packages = with pkgs; [
-    kitty
+    
     redshift
     dust
-    fish
     fzf
     pinentry_qt
     bpytop
     ripgrep
+    gparted
     fd
+    nitrogen
     neofetch
     transmission-gtk
     lsd
     gcc
-    pcmanfm
     zathura
     mpv
-    emacs
     git-crypt
+    starship
     gnupg
     bat
   ];
